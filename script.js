@@ -5,7 +5,7 @@ const fs = require('fs');
 //     else console.log("file created");
 // })
 
-fs.readFile("song.txt", function(err, data){
+fs.readFile("song.txt",'utf8' ,function(err, data){
     if(err) console.log(err);
     else console.log(data);
 })
