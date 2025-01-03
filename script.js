@@ -35,7 +35,9 @@ const fs = require('fs');
 //     else console.log(files);
 // })
 
-fs.rm("movie",{recursive:true}, function(err){
-    if(err) console.log(err);
-    else console.log("folder deleted");
-})
+// fs.rm("movie",{recursive:true}, function(err){
+//     if(err) console.log(err);
+//     else console.log("folder deleted");
+// })
+
+fs.writeFileSync("latur.txt","nilanga rice" );
