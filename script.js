@@ -30,7 +30,7 @@ const fs = require('fs');
 //     else console.log("folder created");
 // })
 
-fs.readdir("movie", function(err, files) {
+fs.readdir("movie", {withFileTypes: true}, function(err, files) {
     if (err) console.log(err);
     else console.log(files);
 })
