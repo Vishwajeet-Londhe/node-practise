@@ -40,4 +40,7 @@ const fs = require('fs');
 //     else console.log("folder deleted");
 // })
 
-fs.writeFileSync("latur.txt","nilanga rice" );
+// fs.writeFileSync("latur.txt","nilanga rice" );
+
+fs.readFileSync("latur.txt","utf8");
+console.log("pune");
