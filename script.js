@@ -42,5 +42,15 @@ const fs = require('fs');
 
 // fs.writeFileSync("latur.txt","nilanga rice" );
 
-fs.readFileSync("latur.txt","utf8");
-console.log("pune");
+// fs.readFileSync("latur.txt","utf8");
+// console.log("pune");
+
+fs.unlink("latur.txt", function(err){
+    if(err) console.log(err);
+    else console.log("file deleted");
+})
+
+fs.unlink("movie.txt", function(err){
+    if(err) console.log(err);
+    else console.log("file deleted");
+})
