@@ -35,7 +35,7 @@ const fs = require('fs');
 //     else console.log(files);
 // })
 
-fs.rmdir("movie", {recursive:true}, function(err){
+fs.rm("movie",{recursive:true}, function(err){
     if(err) console.log(err);
     else console.log("folder deleted");
 })
