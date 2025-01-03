@@ -15,7 +15,12 @@ const fs = require('fs');
 //     else console.log("file appended");
 // })
 
-fs.rename("song.txt", "favSong.txt", function(err){
+// fs.rename("song.txt", "favSong.txt", function(err){
+//     if(err) console.log(err);
+//     else console.log("file renamed");
+// })
+
+fs.unlink("favSong.txt", function(err){
     if(err) console.log(err);
-    else console.log("file renamed");
+    else console.log("file deleted");
 })
