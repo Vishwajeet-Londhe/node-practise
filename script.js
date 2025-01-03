@@ -30,7 +30,12 @@ const fs = require('fs');
 //     else console.log("folder created");
 // })
 
-fs.readdir("movie", {withFileTypes: true}, function(err, files) {
-    if (err) console.log(err);
-    else console.log(files);
+// fs.readdir("movie", {withFileTypes: true}, function(err, files) {
+//     if (err) console.log(err);
+//     else console.log(files);
+// })
+
+fs.rmdir("movie", function(err){
+    if(err) console.log(err);
+    else console.log("folder deleted");
 })
