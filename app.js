@@ -44,4 +44,8 @@ app.get('/about', function (req, res) {
     res.send('this is the about is the')
   })
 
+  app.get('*', function (req, res) {
+    res.send('work in progress')
+  })
+
 app.listen(3000)
