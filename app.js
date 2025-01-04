@@ -40,4 +40,8 @@ app.get('/', function (req, res) {
   res.send('this is main is the')
 })
 
+app.get('/about', function (req, res) {
+    res.send('this is the about is the')
+  })
+
 app.listen(3000)
