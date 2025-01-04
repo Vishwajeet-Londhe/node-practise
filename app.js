@@ -12,14 +12,7 @@
 const http = require('http');
 
 const server = http.createServer(function(req, res){
-    if(req.url === '/'){
-        res.end("h5i");
-    }
-    else if(req.url === '/about'){
-        res.end("about");
-    }
-    else{
-        res.end("page not found");
-    }
+    console.log(req);
+    res.end("hello");
 })
 server.listen(3000);
