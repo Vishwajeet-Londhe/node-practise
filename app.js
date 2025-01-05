@@ -36,6 +36,11 @@
 const express = require('express')
 const app = express()
 
+app.use(function(req, res, next){
+  console.log("hilo kaise ho");
+  next();
+})
+
 app.get('/', function (req, res) {
   res.send('this is main is the')
 })
