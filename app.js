@@ -126,9 +126,11 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-app.use(cors());
-
 app.get('/', function (req, res, next) {
+    res.send("hello world");
+})
+
+app.get('/shareable', cors(), function (req, res, next) {
     res.send("hello world");
 })
 
