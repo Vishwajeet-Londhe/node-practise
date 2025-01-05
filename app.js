@@ -122,16 +122,33 @@ const session = require("express-session")
 
 
 // cors
+// const express = require('express');
+// const app = express();
+// const cors = require('cors');
+
+// app.get('/', function (req, res, next) {
+//     res.send("hello world");
+// })
+
+// app.get('/shareable', cors(), function (req, res, next) {
+//     res.send("hello world");
+// })
+
+// app.listen(3000);
+
+
+
+// Cookie-parser
 const express = require('express');
 const app = express();
-const cors = require('cors');
 
 app.get('/', function (req, res, next) {
     res.send("hello world");
 })
 
-app.get('/shareable', cors(), function (req, res, next) {
-    res.send("hello world");
+app.get("/banned", function (req, res, next) {
+    res.cookie("name", "vaishu");
+    res.send("cookie set for banned");
 })
 
 app.listen(3000);
