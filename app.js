@@ -86,6 +86,10 @@ app.get("/", function (req, res, next) {
 app.get('/about', function (req, res, next) {
   req.session.polo = true;
   res.send("done");
-})   
+})  
+
+app.get('/check', function (req, res, next) {
+  console.log(req.session.polo);
+}) 
 
 app.listen(3000);
