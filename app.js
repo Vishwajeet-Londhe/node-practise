@@ -141,13 +141,21 @@ const session = require("express-session")
 // Cookie-parser
 const express = require('express');
 const app = express();
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser())
 
 app.get('/', function (req, res, next) {
     res.send("hello world");
 })
 
+app.get("/getCookie", function (req, res, next) {
+    console.log(req.cookies);
+    res.send("cookie received");
+})
+
 app.get("/banned", function (req, res, next) {
-    res.cookie("name", "vaishu");
+    res.cookie("caste", "maratha");
     res.send("cookie set for banned");
 })
 
