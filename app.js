@@ -169,7 +169,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 
-app.use(morgan("dev"));
+app.use(morgan("tiny"));
 
 app.get('/', function (req, res, next) {
     res.send("hello world");
