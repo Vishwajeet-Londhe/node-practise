@@ -197,23 +197,37 @@ const session = require("express-session")
 
 //dynamic routing
 
-const express = require("express");
-const app = express();
+// const express = require("express");
+// const app = express();
 
-app.get("/",function(req, res){
-    res.send("namste node js");
-})
-
-app.get("/prodfile",function(req, res){
-    res.send("poduction it is the , I am working is the");
-})
-
-// app.get("/profile/:username",function(req, res){
-//     res.send(req.params.username + "'s page");
+// app.get("/",function(req, res){
+//     res.send("namste node js");
 // })
 
-app.get("/author/:username/:book/:age",function(req, res){
-    res.send(`the author is ${req.params.username} of the book ${req.params.book} at the age of ${req.params.age}`);
+// app.get("/prodfile",function(req, res){
+//     res.send("poduction it is the , I am working is the");
+// })
+
+// // app.get("/profile/:username",function(req, res){
+// //     res.send(req.params.username + "'s page");
+// // })
+
+// app.get("/author/:username/:book/:age",function(req, res){
+//     res.send(`the author is ${req.params.username} of the book ${req.params.book} at the age of ${req.params.age}`);
+// })
+
+// app.listen(3000);
+
+
+//ejs
+
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'ejs');
+
+app.get('/', function (req, res) {
+    res.render("index");
 })
 
 app.listen(3000);
