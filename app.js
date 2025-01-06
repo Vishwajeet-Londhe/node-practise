@@ -234,12 +234,14 @@ const session = require("express-session")
 
 
 
-//form
+//form get
 
 const express = require("express");
 const app = express();
 
 app.set("view engine","ejs" );
+app.use(express.json());
+app.use(express.urlencoded({ extended:true}));
 
 app.get("/",function(req, res){
     res.render("index");
