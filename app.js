@@ -165,18 +165,30 @@ const session = require("express-session")
 
 // morgan
 
-const express = require('express');
+// const express = require('express');
+// const app = express();
+// const morgan = require('morgan');
+
+// app.use(morgan("combined"));
+
+// app.get('/', function (req, res, next) {
+//     res.send("hello world");
+// })
+
+// app.get("/social", function (req, res, next) {
+//     res.send("insta chhe");
+// })
+
+// app.listen(3000);
+
+
+//req and res
+
+const express = require("express");
 const app = express();
-const morgan = require('morgan');
 
-app.use(morgan("combined"));
-
-app.get('/', function (req, res, next) {
-    res.send("hello world");
-})
-
-app.get("/social", function (req, res, next) {
-    res.send("insta chhe");
+app.get("/", function (req, res) {
+    console.log(req);
 })
 
 app.listen(3000);
