@@ -208,8 +208,12 @@ app.get("/prodfile",function(req, res){
     res.send("poduction it is the , I am working is the");
 })
 
-app.get("/profile/:username",function(req, res){
-    res.send(req.params.username + "'s page");
+// app.get("/profile/:username",function(req, res){
+//     res.send(req.params.username + "'s page");
+// })
+
+app.get("/author/:username/:book/:age",function(req, res){
+    res.send(`the author is ${req.params.username} of the book ${req.params.book} at the age of ${req.params.age}`);
 })
 
 app.listen(3000);
