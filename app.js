@@ -221,17 +221,33 @@ const session = require("express-session")
 
 //ejs
 
-const express = require('express');
+// const express = require('express');
+// const app = express();
+
+// app.set('view engine', 'ejs');
+
+// app.get('/', function (req, res) {
+//     res.render("index");
+// })
+
+// app.listen(3000);
+
+
+
+//form
+
+const express = require("express");
 const app = express();
 
-app.set('view engine', 'ejs');
+app.set("view engine","ejs" );
 
-app.get('/', function (req, res) {
+app.get("/",function(req, res){
     res.render("index");
 })
 
-app.get('/profile', function (req, res) {
-    res.render("profile");
+app.get("/check",function(req, res){
+    console.log(req.query);
+    res.send("working");
 })
 
 app.listen(3000);
