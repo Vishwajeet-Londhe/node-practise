@@ -188,7 +188,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-    console.log(req.url);
+    console.log(req.method);
 })
 
 app.listen(3000);
