@@ -184,11 +184,32 @@ const session = require("express-session")
 
 //req and res
 
+// const express = require("express");
+// const app = express();
+
+// app.get("/", function (req, res) {
+//     res.send("frontend se backend bhejana");;
+// })
+
+// app.listen(3000);
+
+
+
+//dynamic routing
+
 const express = require("express");
 const app = express();
 
-app.get("/", function (req, res) {
-    res.send("frontend se backend bhejana");;
+app.get("/",function(req, res){
+    res.send("namste node js");
+})
+
+app.get("/prodfile",function(req, res){
+    res.send("poduction it is the , I am working is the");
+})
+
+app.get("/profile/:username",function(req, res){
+    res.send(req.params.username + "'s page");
 })
 
 app.listen(3000);
