@@ -188,7 +188,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-    console.log(req.ip);
+    console.log(req.url);
 })
 
 app.listen(3000);
