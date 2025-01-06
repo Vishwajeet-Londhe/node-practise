@@ -188,7 +188,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", function (req, res) {
-    console.log(req.method);
+    res.send("frontend se backend bhejana");;
 })
 
 app.listen(3000);
